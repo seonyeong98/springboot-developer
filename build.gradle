@@ -1,0 +1,25 @@
+plugins {
+    id 'java'
+    //spring boot plugin
+    id 'org.springframework.boot' version '3.0.2'
+    //spring의 의존성을 관리
+    id 'io.spring.dependency-management' version '1.1.0'
+}
+
+//프로젝트를 설정할 때의 기본값인 그룹 이름과 버전 입력 그리고 자바 버전
+group = 'me.parkseonyeong'
+version = '1.0'
+sourceCompatibility = '17'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+}
+
+test {
+    useJUnitPlatform()
+}
